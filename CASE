@@ -15,3 +15,21 @@ when 'Salesperson' then salary* 0.05
 else 0
 end as bonus
 from employee;
+
+-- 급여 범위 지정 5000이상 고액 3000이상 중간
+select ename, salary,
+case 
+when salary >= 5000 then '고액'
+when salary >= 3000 then '중간'
+else '보통'
+end as salary_info
+from employee;
+
+-- 직원의 입사한 연도에 따른 경력 계산
+select ename, hiredate,
+case
+when extract(year from hiredate) = 2023 then '1년 미만'
+when extract(year from hiredate) = 2022 then '1년'
+else '2년 이상'
+end as hiredate
+from employee;
