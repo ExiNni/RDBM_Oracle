@@ -32,7 +32,7 @@ DATA QUERY LANGUAGE
     예제) SELECT 열이름
           FROM 테이블명
           ORDER BY 열이름 DESC; or ASC;
-            * ACD: 오름차순 (DEFAULT 값)
+            * ASC: 오름차순 (DEFAULT 값)
             * DESC: 내림차순 
               
   UNION: 두 개 이상의 SELECT 문 결과를 결합해서 하나의 결과 집합으로 반환
