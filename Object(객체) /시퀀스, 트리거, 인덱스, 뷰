@@ -56,3 +56,28 @@ VIEW 논리적 객체
 		넣고자하는 컬럼 
 	FROM 테이블 명
 	;
+
+INDEX(인덱스)
+DB성늘을 향상시키는 데 중요한 역할을 하는 데이터 구조
+특정 열(컬럼)에 대한 검색 및 조회 작업을 최적화 하기 위해 사용
+
+예제)
+EMPLOYEE TABLE -- 테이블이 있다고 가정
+CREATE TABLE EMPLOYEE(
+ 	EMPLOYEE_ID NUMBER(5) PRIMARY KEY,
+	NAME VARCHAR2(50),
+	HIRE_DATE DATE
+);
+
+-- 인덱스 생성
+CREATE INDEX INDX_EMPLOYEE_NAME ON EMPLOYEE(NAME);
+(어떤 열의 값을 기반으로 검색을 빠르게 하기 위해 작성하는 컬럼 이름)
+
+--인덱스를 사용한 SELECT 예제문 
+SELECT*
+FROM EMPLOYEE
+WHERE NAME = 'SMITH';
+
+*인덱스는 B-TREE 구조로 되어있음
+B-TREE: 데이터를 저장하고 효율적으로 검색하는데 사용되는 데이터 구조 
+BALANCED TREE 주로 DB 시스템, 파일시스템, 디스크관리, 파일구조, 검색엔진 등 다양한 컴퓨팅 시스템에서 인덱싱에 사용
