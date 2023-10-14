@@ -32,4 +32,4 @@ when extract(year from hiredate) = 2023 then '1년 미만'
 when extract(year from hiredate) = 2022 then '1년'
 else '2년 이상'
 end as hiredate
-from employee;
+from employee;  
